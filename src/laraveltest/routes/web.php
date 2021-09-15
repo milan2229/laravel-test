@@ -18,11 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('user', UserController::class);
-//Route::post('/create', UserController::class);
-//    Route::get('/user', [UserController::class, 'index']);
 
-
-//Route::group(['prefix'=>'user'], function () {
-//    Route::get('index', 'UserController@index')->name('user.index');
-//});
-//Route::get('/user', [UserController::class, 'index']);

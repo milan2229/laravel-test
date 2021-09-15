@@ -14,8 +14,7 @@ class AddBirthdayToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->date('birthday');
-            $table->boolean('iscool');
+
         });
     }
 
@@ -27,7 +26,8 @@ class AddBirthdayToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->date('birthday');
+            $table->boolean('iscool')->default(0);
         });
     }
 }

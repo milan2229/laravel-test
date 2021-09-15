@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
+<div class="container">
+<a class="btn btn-primary btn-lg" href="{{ route('user.create') }}" role="button">NEW</a>
 <table class="table">
     <thead>
     <tr>
@@ -15,38 +17,23 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>edit</td>
-        <td>@mdo</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>edit</td>
-        <td>@mdo</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td>edit</td>
-        <td>@mdo</td>
-    </tr>
+    @foreach($users as $user)
+        <tr>
+            <th scope="row">{{ $user->name }}</th>
+            <td>{{ $user->birthday }}</td>
+            <td>{{ $user->email }}</td>
+            <td>{{ $user->iscool }}
+            <th><a href="{{ route('user.edit',$user->id) }}" class="btn btn-success">edit</a></th>
+            </td>
+            <td>
+                <form method="POST" action="{{route('user.destroy',$user->id)}}">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger">削除</button>
+            </td>
+            </form>
+        </tr>
+    @endforeach
     </tbody>
 </table>
-
-<a href="{{ route('user.create') }}">新規</a>
-{{--<a href="{{ route('user.index') }}">一覧</a>--}}
-
-
-{{--<form method="post" action="/users/{$data->id}">--}}
-{{--    <input name="_method" type="hidden" value="PUT">--}}
-{{--    <input type="text" name="name" />--}}
-{{--    <input type="submit" />--}}
-{{--</form>--}}
+</div>

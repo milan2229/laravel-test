@@ -1,24 +1,29 @@
-<h1>新規登録画面</h1>
-<a href="{{ route('user.index') }}">一覧</a>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<form method="POST" action="{{route('user.store')}}">
-@csrf
+<div class="container">
+    <h1>新規登録画面</h1>
+{{--    <a href="{{ route('user.index') }}">一覧</a>--}}
+    <a class="btn btn-primary btn-lg" href="{{ route('user.index') }}" role="button">User All</a>
+    <form method="POST" action="{{route('user.store')}}">
+        @csrf
 
-    <div>
-        <label for="form-name">Name</label>
-        <input type="text" name="name" id="form-name" required>
-    </div>
+        <div>
+            <label for="form-name">Name</label>
+            <input type="text" name="name" id="form-name" class="form-control" required>
+        </div>
+        <div>
+            <label for="form-pass">birthday</label>
+            <input type="date" name="birthday" id="form-birthday" class="col-form-label form-control">
+        </div>
+        <div>
+            <label for="form-email">メールアドレス</label>
+            <input type="email" name="email" id="form-email" class="form-control">
+        </div>
+        <div>
+            <label for="form-cool">Is cool</label>
+            <input type="checkbox" value="1"  name="cool" id="form-cool">
+        </div>
+        <button class="btn btn-primary btn-lg" type="submit">NEW</button>
 
-    <div>
-        <label for="form-pass">パスワード</label>
-        <input type="text" name="password" id="form-pass">
-    </div>
-
-    <div>
-        <label for="form-email">メールアドレス</label>
-        <input type="email" name="email" id="form-email">
-    </div>
-
-    <button type="submit">登録</button>
-
-</form>
+    </form>
+</div>
