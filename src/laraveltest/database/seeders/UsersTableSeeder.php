@@ -16,21 +16,18 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'user01',
-                'birthday' => '19801122',
                 'email' => 'user01@gmail.com',
-                'birthday' => '2000/01/01'
+                'birthday' => '1980/11/22',
             ],
             [
                 'name' => 'user02',
-                'birthday' => '19801122',
                 'email' => 'user02@gmail.com',
-                'birthday' => '2000/02/02'
+                'birthday' => '1980/11/22',
             ],
             [
                 'name' => 'user03',
-                'birthday' => '19801122',
                 'email' => 'user03@gmail.com',
-                'birthday' => '2000/03/03'
+                'birthday' => '1980/11/22',
             ]
 
         ]);
