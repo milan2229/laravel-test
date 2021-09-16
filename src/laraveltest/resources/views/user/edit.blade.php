@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
 <div class="container">
     <h1>Edit</h1>
-{{--    <a href="{{ route('user.index') }}">ユーザ一覧</a>--}}
     <a class="btn btn-primary btn-lg" href="{{ route('user.index') }}" role="button">User All</a>
     <form method="POST" action="{{ route('user.update',$user->id) }}">
         <input type="hidden" name="_method" value="PUT">
@@ -26,13 +28,6 @@
             <label for="form-cool">Is cool</label>
             <input type="checkbox" name="cool" value="1" class="form-check-input">
         </div>
-{{--        <div class="form-check">--}}
-{{--            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>--}}
-{{--            <label class="form-check-label" for="flexCheckChecked">--}}
-{{--                Checked checkbox--}}
-{{--            </label>--}}
-{{--        </div>--}}
-{{--        <input type="hidden" name="_method" value="patch">--}}
         <button class="btn btn-primary btn-lg" type="submit">Update</button>
     </form>
 </div>

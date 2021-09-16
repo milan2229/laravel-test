@@ -12,11 +12,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+//// Better Method
     public function index()
     {
         $users = User::all();
-        return view('user.index', compact('users'));
-
+        return view('user.index', ['users' => $users]);
     }
 
     /**
