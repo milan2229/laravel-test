@@ -6,13 +6,19 @@
     <form method="POST" action="{{route('user.store')}}">
         @csrf
 
+
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
         <div>
             <label for="form-name">Name</label>
             <input type="text" name="name" id="form-name" class="form-control" required>
         </div>
         <div>
             <label for="form-pass">birthday</label>
-            <input type="date" name="birthday" id="form-birthday" class="col-form-label form-control">
+            <input type="date" name="birthday" id="form-birthday" value="{{ old('birthday') }}" class="col-form-label form-control">
         </div>
         <div>
             <label for="form-email">メールアドレス</label>

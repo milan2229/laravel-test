@@ -40,6 +40,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'email' => ['email:rfc'],
+            'birthday' => ['date'],
+        ]);
         $user = new User;
 
         $user->name = $request->input('name');
@@ -47,8 +51,8 @@ class UserController extends Controller
         $user->birthday = $request->input('birthday');
         $user->iscool = $request->input('cool') == "1" ? 1 : 0;
 
-
         $user->save();
+
 
         return redirect('user');
     }
