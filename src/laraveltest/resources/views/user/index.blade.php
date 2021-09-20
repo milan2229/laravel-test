@@ -2,6 +2,7 @@
 
 <div class="container">
     <a class="btn btn-primary btn-lg" href="{{ route('user.create') }}" role="button">NEW</a>
+    <a class="btn btn-info btn-lg" href="{{ route('post.index') }}" role="button">Qiita</a>
     <table class="table">
         <thead>
         <tr>
