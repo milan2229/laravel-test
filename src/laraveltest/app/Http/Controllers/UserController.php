@@ -41,15 +41,17 @@ class UserController extends Controller
     {
 
         $request->validate([
-            'email' => ['email:rfc'],
+            'name' => ['required'],
             'birthday' => ['date'],
+            'email' => ['required','unique:users','email:rfc'],
+            'iscool' => ['boolean'],
         ]);
         $user = new User;
 
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->birthday = $request->input('birthday');
-        $user->iscool = $request->input('cool') == "1" ? 1 : 0;
+        $user->iscool = $request->input('cool');
 
         $user->save();
 
@@ -79,6 +81,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => ['required'],
+            'birthday' => ['date'],
+            'email' => ['required','email:rfc'],
+            'iscool' => ['boolean'],
+        ]);
 
         $user = User::find($id);
 

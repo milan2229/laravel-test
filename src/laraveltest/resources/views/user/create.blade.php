@@ -5,8 +5,6 @@
     <a class="btn btn-warning btn-lg" href="{{ route('user.index') }}" role="button">User All</a>
     <form method="POST" action="{{route('user.store')}}">
         @csrf
-
-
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

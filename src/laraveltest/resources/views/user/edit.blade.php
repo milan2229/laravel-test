@@ -7,6 +7,11 @@
         <input type="hidden" name="_method" value="PUT">
         @csrf
         @method('PUT')
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
         <div>
             <label for="form-name">Name</label>
             <input type="text" name="name" value="{{ $user->name }}" class="form-control" required>
