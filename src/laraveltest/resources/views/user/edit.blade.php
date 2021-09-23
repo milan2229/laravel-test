@@ -16,19 +16,18 @@
             <label for="form-name">Name</label>
             <input type="text" name="name" value="{{ $user->name }}" class="form-control" required>
         </div>
-
         <div>
             <label for="form-pass">birthday</label>
             <input type="date" name="birthday" value="{{ $user->birthday }}" class="form-control">
         </div>
-
         <div>
             <label for="form-email">email</label>
             <input type="email" name="email" value="{{ $user->email }}" class="col-form-label form-control">
         </div>
         <div>
             <label for="form-cool">Is cool</label>
-            <input type="checkbox" name="cool" value="1" class="form-check-input">
+            <input type="checkbox" name="cool" value="1" class="form-check-input"
+                   @if (old('cool', $user->iscool) == 1) checked @endif>
         </div>
         <button class="btn btn-primary btn-lg" type="submit">Update</button>
     </form>

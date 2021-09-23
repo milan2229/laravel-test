@@ -9,9 +9,6 @@ class PostController extends Controller
 {
     public function index()
     {
-
-
-        {
             $tag_id = "laravel";
 
             $url = "https://qiita.com/api/v2/tags/" . $tag_id . "/items?page=1&per_page=20";
@@ -26,6 +23,5 @@ class PostController extends Controller
             $posts = json_decode($posts, true);
 
             return view('post.index', ['posts' => $posts]);
-        }
     }
 }
