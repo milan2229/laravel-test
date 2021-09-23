@@ -10,14 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-
+    use  HasFactory;
     /**
      * The attributes that are mass assignable.
      *
@@ -30,11 +23,4 @@ class User extends Authenticatable
         'birthday',
         'iscool'
     ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-
 }
