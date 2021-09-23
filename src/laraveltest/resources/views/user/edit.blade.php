@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1>Edit</h1>
-    <a class="btn btn-warning btn-lg" href="{{ route('user.index') }}" role="button">User All</a>
+    <a class="btn btn-warning btn-lg" href="{{ route('user') }}" role="button">User All</a>
     <form method="POST" action="{{ route('user.update',$user->id) }}">
         <input type="hidden" name="_method" value="PUT">
         @csrf

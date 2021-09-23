@@ -14,7 +14,6 @@ class UserController extends Controller
      */
 
 
-//// Better Method
     public function index()
     {
         $users = User::paginate(10);
@@ -55,8 +54,7 @@ class UserController extends Controller
 
         $user->save();
 
-
-        return redirect('user');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -98,7 +96,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('user');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -112,6 +110,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return redirect('user');
+        return redirect()->route('user.index');
     }
 }
