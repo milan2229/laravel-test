@@ -1,38 +1,49 @@
 @extends('layout.layout')
-
 <div class="container">
-    <a class="btn btn-primary btn-lg" href="{{ route('user.create') }}" role="button">NEW</a>
-    <a class="btn btn-info btn-lg" href="{{ route('post.index') }}" role="button">Qiita</a>
-    <table class="table">
+    <div class="blue-button">
+        <a href="{{ route('user.create') }}"
+           class="bg-blue-700 btn hover:bg-blue-500 font-semibold text-white py-2 px-4 rounded">NEW</a>
+    </div>
+    <div class="yellow-button">
+        <a href="{{ route('post.index') }}"
+           class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">Qiita</a>
+    </div>
+</div>
+<div class="md:container md:mx-auto">
+    <table>
         <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Birthday</th>
-            <th scope="col">Email</th>
-            <th scope="col">Is Cool?</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
+        <tr class="bg-gray-100">
+            <th class="w-1/4 px-4 py-2">Name</th>
+            <th class="w-1/4 px-4 py-2">Birthday</th>
+            <th class="w-1/4 px-4 py-2">Email</th>
+            <th class="w-1/4 px-4 py-2">Is Cool?</th>
+            <th class="w-1/4 px-4 py-2">Edit</th>
+            <th class="w-1/4 px-4 py-2">Delete</th>
         </tr>
         </thead>
         <tbody>
         @foreach($users as $user)
             <tr>
-                <th scope="row">{{ $user->name }}</th>
-                <td>{{ $user->birthday }}</td>
-                <td>{{ $user->email }}</td>
-                <td>{{ $user->iscool }}
-                <th><a href="{{ route('user.edit',$user->id) }}" class="btn btn-success">edit</a></th>
+                <td class="border px-4 py-2">{{ $user->name }}</td>
+                <td class="border px-4 py-2">{{ $user->birthday }}</td>
+                <td class="border px-4 py-2">{{ $user->email }}</td>
+                <td class="border px-4 py-2">{{ $user->iscool }}</td>
+                <td class="border px-4 py-2"><a href="{{ route('user.edit',$user->id) }}"
+                                                class="bg-green-700 btn hover:bg-green-500 font-semibold text-white py-2 px-4 rounded">edit</a>
                 </td>
-                <td>
+                <td class="border px-4 py-2">
                     <form method="POST" action="{{route('user.destroy',$user->id)}}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger">delete</button>
+                        <button type="submit"
+                                class="bg-red-700 btn hover:bg-red-500 font-semibold text-white py-2 px-4 rounded">
+                            delete
+                        </button>
+                    </form>
                 </td>
-                </form>
             </tr>
         @endforeach
         </tbody>
     </table>
-    {{ $users->links() }}
+{{--    {{ $users->links() }}--}}
 </div>
