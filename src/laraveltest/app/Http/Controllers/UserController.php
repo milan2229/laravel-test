@@ -54,7 +54,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('/');
     }
 
     /**
@@ -91,12 +91,12 @@ class UserController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->birthday = $request->input('birthday');
-        $user->iscool = $request->input('cool') == "1" ? 1 : 0;
+        $user->iscool = $request->input('cool');
 
 
         $user->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('/');
     }
 
     /**
@@ -110,6 +110,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return redirect()->route('user.index');
+        return redirect()->route('/');
     }
 }

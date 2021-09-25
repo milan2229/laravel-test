@@ -20,7 +20,7 @@
         </table>
         <div class="container">
         <div class="item">
-            <a class="btn btn-warning btn-lg" href="{{ route('user.index') }}" role="button">User All</a>
+            <a class="btn btn-warning btn-lg" href="{{ route('/') }}" role="button">User All</a>
         </div>
     </div>
     </div>
