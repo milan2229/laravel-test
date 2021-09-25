@@ -14,3 +14,11 @@
 .bg-red-700 {
     margin-top: 15px;
 }
+
+.bg-yellow-500 {
+    margin: 20px;
+}
+
+.absolute {
+    background-color: #26c6da;
+}

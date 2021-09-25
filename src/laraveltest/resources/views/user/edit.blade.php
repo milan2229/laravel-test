@@ -28,14 +28,12 @@
                                               clip-rule="evenodd"/>
                                       </svg>
                                     </span>
-                                    <p class="ml-2">
-                                    <div><label for="form-name">Name</label><br>
+                                    <div><label for="form-name">Name</label>
                                         <input type="text" name="name"
                                                value="{{ $user->name }}"
                                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-600"
                                                required>
                                     </div>
-                                    </p>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="h-6 flex items-center sm:h-7">
@@ -46,13 +44,11 @@
                                               clip-rule="evenodd"/>
                                       </svg>
                                     </span>
-                                    <p class="ml-2">
                                     <div>
-                                        <label for="form-pass">birthday</label><br>
+                                        <label for="form-pass">Birthday</label>
                                         <input type="date" name="birthday" value="{{ $user->birthday }}"
                                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-600">
                                     </div>
-                                    </p>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="h-6 flex items-center sm:h-7">
@@ -63,13 +59,11 @@
                                               clip-rule="evenodd"/>
                                       </svg>
                                     </span>
-                                    <p class="ml-2">
                                     <div>
-                                        <label for="form-email">email</label><br>
+                                        <label for="form-email">Email</label>
                                         <input type="email" name="email" value="{{ $user->email }}"
                                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-600">
                                     </div>
-                                    </p>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="h-6 flex items-center sm:h-7">
@@ -80,28 +74,24 @@
                                               clip-rule="evenodd"/>
                                       </svg>
                                     </span>
-                                    <p class="ml-2">
                                     <div>
-                                        <label for="form-cool">Is cool</label>
+                                        <label for="form-cool">Is Cool</label>
                                         <input type="checkbox" name="cool" value="1"
                                                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                                @if (old('cool', $user->iscool) == 1) checked @endif>
                                     </div>
-                                    </p>
                                 </li>
                             </ul>
                         </div>
-                        <div class="footer-button">
-                            <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-                                <button href="{{ route('/') }}"
-                                        class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
-                                    Index
-                                </button>
-                                <button
-                                    class="bg-blue-700 btn hover:bg-blue-500 font-semibold text-white py-2 px-4 rounded"
-                                    type="submit">Update
-                                </button>
-                            </div>
+                        <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+                            <button href="{{ route('/') }}"
+                                    class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
+                                Index
+                            </button>
+                            <button
+                                class="bg-blue-700 btn hover:bg-blue-500 font-semibold text-white py-2 px-4 rounded"
+                                type="submit">Update
+                            </button>
                         </div>
                     </div>
                 </form>
