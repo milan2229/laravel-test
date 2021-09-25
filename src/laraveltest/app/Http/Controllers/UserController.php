@@ -51,7 +51,7 @@ class UserController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->birthday = $request->input('birthday');
-        $user->iscool = $request->input('cool');
+        $user->iscool = $request->input('cool') == "1";
 
         $user->save();
 
@@ -92,7 +92,7 @@ class UserController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->birthday = $request->input('birthday');
-        $user->iscool = $request->input('cool');
+        $user->iscool = $request->input('cool') == "1";
 
 
         $user->save();

@@ -6,7 +6,7 @@
     </div>
     <div class="yellow-button">
         <a href="{{ route('post.index') }}"
-           class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">Qiita</a>
+           class="bg-green-400 btn hover:bg-green-300 font-semibold text-white py-2 px-4 rounded">Qiita</a>
     </div>
 </div>
 <div class="md:container md:mx-auto">
