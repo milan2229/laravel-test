@@ -17,8 +17,8 @@
             <th class="w-1/4 px-4 py-2">Birthday</th>
             <th class="w-1/4 px-4 py-2">Email</th>
             <th class="w-1/4 px-4 py-2">Is Cool?</th>
-            <th class="w-1/4 px-4 py-2">Edit</th>
-            <th class="w-1/4 px-4 py-2">Delete</th>
+            <th class="w-1/4 px-4 py-2"></th>
+            <th class="w-1/4 px-4 py-2"></th>
         </tr>
         </thead>
         <tbody>
@@ -28,8 +28,9 @@
                 <td class="border px-4 py-2">{{ $user->birthday }}</td>
                 <td class="border px-4 py-2">{{ $user->email }}</td>
                 <td class="border px-4 py-2">{{ $user->iscool }}</td>
-                <td class="border px-4 py-2"><a href="{{ route('user.edit',$user->id) }}"
-                                                class="bg-green-700 btn hover:bg-green-500 font-semibold text-white py-2 px-4 rounded">edit</a>
+                <td class="border px-4 py-2">
+                    <a href="{{ route('user.edit',$user->id) }}"
+                       class="bg-green-700 btn hover:bg-green-500 font-semibold text-white py-2 px-4 rounded">edit</a>
                 </td>
                 <td class="border px-4 py-2">
                     <form method="POST" action="{{route('user.destroy',$user->id)}}">
@@ -45,5 +46,5 @@
         @endforeach
         </tbody>
     </table>
-{{--    {{ $users->links() }}--}}
+    {{--    {{ $users->links() }}--}}
 </div>

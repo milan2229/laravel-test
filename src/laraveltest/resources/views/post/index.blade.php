@@ -1,28 +1,29 @@
 @extends('layout.layout')
-<body>
-<main class="py-4">
-    <div class="container">
-        <table class="table">
+<div class="blue-button">
+    <a href="{{ route('/') }}"
+       class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
+        Index
+    </a>
+</div>
+<div class="md:container md:mx-auto">
+    <table>
+        <thead>
+        <tr class="bg-gray-100">
+            <th class="w-5/10 px-4 py-2">Title</th>
+            <th class="w-1/10 px-4 py-2">Like</th>
+            <th class="w-1/10 px-4 py-2">Comment</th>
+            <th class="w-3/10 px-4 py-2">Created_at</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($posts as $post)
             <tr>
-                <th>title</th>
-                <th>like</th>
-                <th>comment</th>
-                <th>created_at</th>
+                <td class="border px-4 py-2">{{$post['title']}}</td>
+                <td class="border px-4 py-2">{{$post['likes_count']}}</td>
+                <td class="border px-4 py-2">{{$post['comments_count']}}</td>
+                <td class="border px-4 py-2">{{$post['created_at']}}</td>
             </tr>
-            @foreach($posts as $post)
-                <tr>
-                    <td>{{$post['title']}}</td>
-                    <td>{{$post['likes_count']}}</td>
-                    <td>{{$post['comments_count']}}</td>
-                    <td>{{$post['created_at']}}</td>
-                </tr>
-            @endforeach
-        </table>
-        <div class="container">
-        <div class="item">
-            <a class="btn btn-warning btn-lg" href="{{ route('/') }}" role="button">User All</a>
-        </div>
-    </div>
-    </div>
-</main>
-</body>
+        @endforeach
+        </tbody>
+    </table>
+</div>
