@@ -17,14 +17,6 @@
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                             <ul class="list-disc space-y-2">
                                 <li class="flex items-start">
-                                    <span class="h-6 flex items-center sm:h-7">
-                                      <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20"
-                                           fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"/>
-                                      </svg>
-                                    </span>
                                     <div>
                                         <label for="form-name">Name</label>
                                         <input type="text" name="name" id="form-name"
@@ -33,14 +25,6 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="h-6 flex items-center sm:h-7">
-                                      <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20"
-                                           fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"/>
-                                      </svg>
-                                    </span>
                                     <div>
                                         <label for="form-pass">Birthday</label>
                                         <input type="date" name="birthday" id="form-birthday"
@@ -50,14 +34,6 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="h-6 flex items-center sm:h-7">
-                                      <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20"
-                                           fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"/>
-                                      </svg>
-                                    </span>
                                     <div>
                                         <label for="form-email">Email</label>
                                         <input type="email" name="email" id="form-email"
@@ -66,14 +42,6 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="h-6 flex items-center sm:h-7">
-                                      <svg class="flex-shrink-0 h-5 w-5 text-cyan-500" viewBox="0 0 20 20"
-                                           fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                              clip-rule="evenodd"/>
-                                      </svg>
-                                    </span>
                                     <div>
                                         <label for="form-cool">Is Cool</label>
                                         <input type="checkbox"
@@ -85,7 +53,7 @@
                                     <p>
                                     <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                                         <a href="{{ route('/') }}"
-                                                class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-3 px-5 rounded">
+                                           class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-3 px-5 rounded">
                                             Index
                                         </a>
                                         <button
