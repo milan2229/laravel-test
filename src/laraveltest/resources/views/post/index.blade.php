@@ -1,4 +1,5 @@
-@extends('layout.layout')
+@extends('layout.app')
+@include('layout.header')
 <div class="blue-button">
     <a href="{{ route('/') }}"
        class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
