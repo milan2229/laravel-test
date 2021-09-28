@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 class UserController extends Controller
 {
     /**
@@ -42,7 +41,7 @@ class UserController extends Controller
 
         $request->validate([
             'name' => ['required'],
-            'birthday' => ['date'],
+            'birthday' => ['date','required'],
             'email' => ['required','unique:users','email:rfc'],
             'iscool' => ['boolean'],
         ]);
@@ -82,7 +81,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'birthday' => ['date'],
+            'birthday' => ['date','required'],
             'email' => ['required','email:rfc'],
             'iscool' => ['boolean'],
         ]);
