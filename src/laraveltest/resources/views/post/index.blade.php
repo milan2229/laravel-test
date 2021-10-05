@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('post-index')
+@section('content')
 <div class="blue-button">
     <a href="{{ route('user.index') }}"
        class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">

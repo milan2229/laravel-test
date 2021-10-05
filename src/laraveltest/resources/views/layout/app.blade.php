@@ -8,8 +8,5 @@
 </head>
 <body>
 @yield('content')
-@yield('user-create')
-@yield('user-edit')
-@yield('post-index')
 </body>
 </html>
