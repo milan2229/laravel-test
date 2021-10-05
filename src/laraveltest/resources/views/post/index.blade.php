@@ -1,7 +1,7 @@
 @extends('layout.app')
-@include('layout.header')
+@section('post-index')
 <div class="blue-button">
-    <a href="{{ route('/') }}"
+    <a href="{{ route('user.index') }}"
        class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
         Index
     </a>
@@ -28,3 +28,4 @@
         </tbody>
     </table>
 </div>
+@endsection

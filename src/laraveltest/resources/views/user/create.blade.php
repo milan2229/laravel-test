@@ -1,5 +1,4 @@
 @extends('layout.app')
-@include('layout.header')
 @section('title','User Create')
 @section('user-create')
     <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -55,7 +54,7 @@
                                     <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                                         <p>
                                         <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-                                            <a href="{{ route('/') }}"
+                                            <a href="{{ route('user.index') }}"
                                                class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-3 px-5 rounded">
                                                 Index
                                             </a>

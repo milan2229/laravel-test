@@ -1,5 +1,4 @@
 @extends('layout.app')
-@include('layout.header')
 @section('title','User Edit')
 @section('user-edit')
     <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -22,7 +21,8 @@
                             <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                 <ul class="list-disc space-y-2">
                                     <li class="flex items-start">
-                                        <div><label for="form-name">Name</label>
+                                        <div>
+                                            <label for="form-name">Name</label>
                                             <input type="text" name="name"
                                                    value="{{ $user->name }}"
                                                    id="form-name"
@@ -33,7 +33,8 @@
                                     <li class="flex items-start">
                                         <div>
                                             <label for="form-pass">Birthday</label>
-                                            <input type="date" name="birthday" value="{{ $user->birthday }}" id="form-pass"
+                                            <input type="date" name="birthday" value="{{ $user->birthday }}"
+                                                   id="form-pass"
                                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-600">
                                         </div>
                                     </li>
@@ -55,7 +56,7 @@
                                 </ul>
                             </div>
                             <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-                                <button href="{{ route('/') }}"
+                                <button href="{{ route('user.index') }}"
                                         class="bg-yellow-500 btn hover:bg-yellow-300 font-semibold text-white py-2 px-4 rounded">
                                     Index
                                 </button>

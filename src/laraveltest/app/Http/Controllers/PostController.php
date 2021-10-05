@@ -14,7 +14,7 @@ class PostController extends Controller
             $url = "https://qiita.com/api/v2/tags/" . $tag_id . "/items?page=1&per_page=20";
             $method = "GET";
 
-            //接続
+
             $client = new Client();
 
             $response = $client->request($method, $url);

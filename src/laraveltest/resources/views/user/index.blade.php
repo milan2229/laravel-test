@@ -1,5 +1,4 @@
 @extends('layout.app')
-@include('layout.header')
 @section('title','Laravel Test')
 @section('content')
     <div class="container">
@@ -49,6 +48,5 @@
             @endforeach
             </tbody>
         </table>
-        {{--    {{ $users->links() }}--}}
     </div>
 @endsection
